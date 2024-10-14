@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Input</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Form Input Mahasiswa</h1>
+        <p>Form Untuk Pendataan Mahasiswa FTEN</p>
+        <form action="out.html">
+            <fieldset>
+                <table>
+                    <tr> 
+                        <td><label for="name">Name</label></td>
+                        <td><input type="text" name="name" id="name" autofocus required></td>
+                    </tr>
+
+                    <tr> 
+                        <td><label for="nim">NIM</label></td>
+                        <td><input type="text" name="nim" id="nim" required pattern="[0-9]{9}" title="Silahkan masukkan sesuai format NIM 9 digit"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" name="email" id="email" placeholder="Masukkan email Anda" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="website">Website</label></td>
+                        <td>  <input type="url" name="website" id="website" placeholder="https://..."></td>
+                    </tr>
+
+                    <tr> 
+                        <td valign="top"><label for="address">Address</label></td>
+                        <td><textarea required name="address" id="address" rows="4"></textarea></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="zipcode">Zip code</label></td>
+                        <td><input type="text" name="zipcode" id="zipcode" required pattern="[0-9]{5}" title="5 angka"></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="prodi">Major</label></td>
+                        <td>
+                            <select name="prodi" id="prodi" required>
+                                <option value="" disabled selected>Pilih Prodi</option>
+                                <option value="31">Informatics</option>
+                                <option value="32">Informatics System</option>
+                                <option value="12">Mechanical Engineering</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="gender">Gender</label></td>
+                        <td>
+                            <input type="radio" name="gender" id="pria" value="pria" required> <label for="pria">Male</label>
+                            <input type="radio" name="gender" id="wanita" value="wanita" required> <label for="wanita">Female</label>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="dob">Date of Birth</label></td>
+                        <td><input type="date" name="dob" id="dob" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="phone">Phone Number</label></td>
+                        <td><input type="tel" name="phone" id="phone" pattern="[0-9]{10,15}" title="Masukkan nomor telepon 10-15 digit" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="hobbies">Hobbies</label></td>
+                        <td>
+                            <input type="checkbox" name="hobbies" value="Reading"> Reading
+                            <input type="checkbox" name="hobbies" value="Gaming"> Gaming
+                            <input type="checkbox" name="hobbies" value="Traveling"> Traveling
+                            <input type="checkbox" name="hobbies" value="Sports"> Sports
+                            <input type="checkbox" name="hobbies" value="Other"> Other
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="photo">Upload Photo</label></td>
+                        <td><input type="file" name="photo" id="photo" accept="image/*" required></td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="Save"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+        <br>
+        <br>
+        <p>&copy; Created by Putri & Dimas - 2024</p>
+    </div>
+</body>
+</html>
